@@ -13,17 +13,15 @@ def shuffle(card_deck, i):
     Recursively move through the array and for each element i, swap array[i]
     with a random element between 0 and i, inclusive
     """
-    if i == 0:
+    if i == len(card_deck):
         return card_deck
-
-    shuffle(card_deck, i-1)
 
     # generate random number between 0 and i inclusive
     to_be_swapped = random.randint(0, i)
     card_deck[i], card_deck[to_be_swapped] = card_deck[to_be_swapped], card_deck[i]
 
-    return card_deck
+    return shuffle(card_deck, i+1)
 
-print shuffle(card_deck, len(card_deck)-1)
+print shuffle(card_deck, 1)
 
 
