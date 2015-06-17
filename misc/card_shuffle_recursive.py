@@ -6,9 +6,7 @@ likely. Assume you are given a random number generator which is perfect.
 
 import random
 
-card_deck = []
-for j in xrange(0, 52):
-    card_deck.append(j)
+card_deck = [j for j in range(0, 52)]
 
 def shuffle(card_deck, i):
     """
