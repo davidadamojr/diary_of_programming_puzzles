@@ -26,8 +26,7 @@ def find_magic_index(sorted_array, start, end):
     # search left side
     leftIndex = min(middle_index - 1, middle_element)
     left = find_magic_index(sorted_array, start, leftIndex)
-    if left:
-        return left 
+    return left
 
 if __name__ == '__main__':
     sorted_array = [-10, -5, 1, 2, 2, 6, 6, 7, 9, 12, 13]
