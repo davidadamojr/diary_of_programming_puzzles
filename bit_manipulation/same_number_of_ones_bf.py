@@ -39,8 +39,8 @@ def count_ones(integer_value):
     return number_of_ones
 
 if __name__ == '__main__':
-    assert count_ones(get_next_smallest(200)) == count_ones(200)
-    print get_next_smallest(200)
+    assert count_ones(get_next_smallest(52)) == count_ones(52)
+    print get_next_smallest(52)
     
-    assert count_ones(get_next_largest(200)) == count_ones(200)
-    print get_next_largest(200)
+    assert count_ones(get_next_largest(52)) == count_ones(52)
+    print get_next_largest(52)
