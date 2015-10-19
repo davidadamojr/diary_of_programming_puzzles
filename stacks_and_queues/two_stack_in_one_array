@@ -1,0 +1,50 @@
+'''
+Question: Implement Two Stack in One Array.
+'''
+
+
+
+def push1(listi,element,top):
+	listi[top]=element
+
+def push2(listi,element,top):
+	listi[top]=element
+
+def pop1(listi,top):
+	k = listi[top]
+	listi[top]=0
+	return k
+
+def pop2(listi,top):
+	k = listi[top]
+	listi[top]=0
+	return k
+
+
+
+listi=[0]*20
+top1,top2=0,19
+while True:
+	print listi
+	t,element=map(int, raw_input("Enter StacK No Followed By Item to push(Enter 0 followed By Stack type to pop) :\n").split())
+	if t==1:
+		push1(listi,element,top1)
+		top1+=1
+	elif t==2:
+		push2(listi,element,top2)
+		top2-=1
+	elif t==0:
+		if element == 1:
+			top1-=1
+			item=pop1(listi,top1)
+			print item
+		else:
+			top2+=1
+			item=pop2(listi,top2)
+			print item
+
+
+
+
+	
+
