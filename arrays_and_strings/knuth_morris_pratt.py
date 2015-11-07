@@ -5,9 +5,9 @@ size of W[], O(n)) and then uses the table to do an efficient search of the stri
 in O(k). KMP makes use of previous match information.
 """
 
-@param pattern string the pattern to be searched for
+# @param pattern string the pattern to be searched for
 def build_table(pattern):
-    prefix_table = []
+    prefix_table = [0 for character in pattern]
     current_position = 2 # current position of table we are computing
     substring_position = 0 # zero-based index in pattern of the next character of the candidate substring
     prefix_table[0] = -1
@@ -31,12 +31,13 @@ def build_table(pattern):
     
     return prefix_table
 
-@param pattern string the string pattern to be searched for
-@param text string the string to be searched
+# @param pattern string the string pattern to be searched for
+# @param text string the string to be searched
 def kmp_search(pattern, text):
     current_match_index = 0 # the beginning of the current match in text
     current_char_index = 0 # the position of the current character in pattern
     prefix_table = build_table(pattern)
+    print prefix_table
     
     while current_match_index + current_char_index < len(text):
         if pattern[current_char_index] == text[current_match_index + current_char_index]:
