@@ -37,7 +37,6 @@ def kmp_search(pattern, text):
     current_match_index = 0 # the beginning of the current match in text
     current_char_index = 0 # the position of the current character in pattern
     prefix_table = build_table(pattern)
-    print prefix_table
     
     while current_match_index + current_char_index < len(text):
         if pattern[current_char_index] == text[current_match_index + current_char_index]:

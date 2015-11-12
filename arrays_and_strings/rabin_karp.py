@@ -1,3 +1,15 @@
+"""
+Write an implementation of the Rabin-Karp algorithm, a string searching algorithm 
+that uses hashing to find any one of a set of pattern strings in a text.
+
+For text of length n and p patterns of combined length m
+Best case running time - O(n+m)
+Worst case running time is - O(nm)
+Space complexity - O(p)
+
+- Originally contributed by Nishant - https://github.com/Optimus-Nishant
+"""
+
 def robin(T,P,d,q):
 	n=len(T)
 	m=len(P)
