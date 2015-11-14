@@ -10,37 +10,27 @@ Space complexity - O(p)
 - Originally contributed by Nishant - https://github.com/Optimus-Nishant
 """
 
-def robin(T,P,d,q):
-	n=len(T)
-	m=len(P)
-	p=0
-	t=0
-	h=pow(d,m-1)%q
-	result=[]
-	for i in range(m):
-		p = (d*p+ ord(P[i]))%q
-		t = (d*t+ ord(T[i]))%q 
-	for s in range(n-m+1):
-		if p==t:
-			chk=True
-			print chk
-			for i in range(m):
-				if P[i]!=T[i+s]:
-					chk=False
-					break
-			if chk:
-				result=result+[s]
-		if s < n-m:
-			t=(t-h*ord(T[s]))%q
-			t=(t*d+ord(T[s+m]))%q
-			t=(t+q)%q
-
-
-	return result
-
-print robin("3141592653589793", "26", 257, 11)
-
-#text=raw_input("Enter The text: ")
-#pattern=raw_input("Enter The Pattern To Be Matched: ")
-#print robin(text,pattern,256,10000007)
-
+def rabin_karp_search(text, pattern):
+	"""
+	Rabin karp search is best with a rolling hash algorithm
+	The key to the algorithm's performance is the efficient computation of 
+	hash values of the successive substrings of text.
+	"""
+	
+	text_length = len(text)
+	pattern_length = len(pattern)
+	pattern_hash = hash(pattern)
+	substr_hash = hash(text[0:pattern_length-1])
+	
+	for i in range(0, text_length-pattern_length):
+		if pattern_hash == substr_hash:
+			if pattern == text[i:pattern_length]: # in case of collisions
+				return i
+	return None
+	
+def hash(substr_index, substr, full_text):
+	if substr == full_text[0:len(substring)]:
+		# calculate new hash value
+	else:
+		# calculate successive hash
+		
