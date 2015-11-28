@@ -2,6 +2,8 @@
 Given an index k, return the kth row of the Pascal's triangle.
 
 For example, given k = 3, return [1,3,3,1]
+
+Leetcode question: https://leetcode.com/problems/pascals-triangle-ii/
 """
 
 def get_pascal_row(row_index):
