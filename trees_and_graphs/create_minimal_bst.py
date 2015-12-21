@@ -2,7 +2,7 @@
 Given a sorted (increasing order) array with unique integer elements, write 
 an algorithm to create a binary search tree with minimal height.
 """
-from tree import Tree
+from binary_tree import BinaryTree
 
 # @param list_of_integers a list of sorted integers in ascending order
 # @param start starting index of list
@@ -13,7 +13,7 @@ def create_minimal_bst(list_of_integers, start, end):
     
     # get the middle element of the list
     middle = (start + end) / 2
-    root = Tree(list_of_integers[middle], create_minimal_bst(list_of_integers, start, middle-1),
+    root = BinaryTree(list_of_integers[middle], create_minimal_bst(list_of_integers, start, middle-1),
                 create_minimal_bst(list_of_integers, middle+1, end))
     return root
 

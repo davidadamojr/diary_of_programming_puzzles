@@ -1,4 +1,4 @@
-class Tree:
+class BinaryTree:
     def __init__(self, value, left=None, right=None):
         self.left = left
         self.right = right

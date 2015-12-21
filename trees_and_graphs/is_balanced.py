@@ -4,10 +4,10 @@ of this question, a balanced tree is defined to be a tree such that the heights
 of the two subtrees of any node never differ by more than one.
 """
 
-from tree import Tree
+from binary_tree import BinaryTree
 import random
 
-root = Tree(random.randint(0,20))
+root = BinaryTree(random.randint(0,20))
 stack = [root]
 for i in range(0, 7):
     current_node = stack.pop()
