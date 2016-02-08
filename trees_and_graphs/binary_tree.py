@@ -10,6 +10,24 @@ class BinaryTreeNode:
 class BinaryTree:
     def __init__(self, root):
         self.root = root
+        
+    def insert(self, key):
+        current_node = self.root
+        
+        while True:
+            if key <= current_node.value:
+                if current_node.left:
+                    current_node = current_node.left
+                else:
+                    current_node.left = BinaryTreeNode(key)
+                    break
+            else:
+                if current_node.right:
+                    current_node = current_node.right
+                else:
+                    current_node.right = BinaryTreeNode(key)
+                    break
+                
 
     def __str__(self):
         queue = [self.root]
