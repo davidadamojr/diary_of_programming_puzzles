@@ -5,7 +5,7 @@ class BinaryTreeNode:
         self.right = right
     
     def __str__(self):
-        return self.value
+        return str(self.value)
 
 class BinaryTree:
     def __init__(self, root):
