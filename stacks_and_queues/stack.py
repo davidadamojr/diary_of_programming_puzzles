@@ -13,7 +13,10 @@ class Stack:
             return self.contents[-1]
             
     def pop(self):
-        return self.contents.pop()
+        if self.is_empty():
+            raise StackEmptyException
+        else: 
+            return self.contents.pop()
     
     def push(self, item):
         self.contents.append(item)
