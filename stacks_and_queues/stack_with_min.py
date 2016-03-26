@@ -19,10 +19,11 @@ class Stack(object):
         self.stack.append(value)
 
     def pop(self):
+        value = self.stack.pop()
         if value == self.min():
             self.min_stack.pop()
 
-        return self.stack.pop()
+        return value
 
     def peek(self):
         return self.stack[-1]
