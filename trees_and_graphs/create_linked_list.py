@@ -9,26 +9,29 @@ sys.path.insert(0, '../linked_lists')
 sys.path.insert(0, '../trees_and_graphs')
 
 from linked_list import LinkedListNode
-from binary_tree import BinaryTree
+from trees import *
 
 
 # build binary tree
-root = BinaryTree(1)
-queue = [root]
+root_node = TreeNode(1)
+tree = BinaryTree(root_node)
+queue = [root_node]
 node_value = 2
 while queue:
     node = queue.pop()
-    node.left = BinaryTree(node_value)
+    
+    node.left = TreeNode(node_value)
     queue.insert(0, node.left)
     node_value = node_value + 1
-    node.right = BinaryTree(node_value)
+    
+    node.right = TreeNode(node_value)
     queue.insert(0, node.right)
     if node_value == 15:
         break
     node_value = node_value + 1
 
-def create_list(tree_root):
-    queue = [tree_root]
+def create_list(tree):
+    queue = [tree.root]
     level = 0
     list_of_lists = []
     while queue:
@@ -50,7 +53,7 @@ def create_list(tree_root):
     return list_of_lists
 
 if __name__ == '__main__':
-    list_levels = create_list(root)
+    list_levels = create_list(tree)
     for linked_list in list_levels:
         print linked_list
    

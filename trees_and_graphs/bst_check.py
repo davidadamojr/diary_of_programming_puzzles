@@ -1,12 +1,12 @@
 """
 Implement a function to check if a binary tree is a binary search tree.
 """
-from binary_tree import *
+from trees import *
 import sys
 
 def build_valid_binary_tree():
-    root = BinaryTreeNode(20)
-    bintree = BinaryTree(root)
+    root = TreeNode(20)
+    bintree = BinarySearchTree(root)
     bintree.insert(10)
     bintree.insert(30)
     bintree.insert(5)
@@ -18,9 +18,9 @@ def build_valid_binary_tree():
     return bintree
 
 def build_invalid_binary_tree():
-    root = BinaryTreeNode(20)
-    root.left = BinaryTreeNode(500)
-    bintree = BinaryTree(root)
+    root = TreeNode(20)
+    root.left = TreeNode(500)
+    bintree = BinarySearchTree(root)
     bintree.insert(10)
     bintree.insert(30)
     bintree.insert(5)
