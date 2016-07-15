@@ -13,7 +13,7 @@ from linked_list import LinkedListNode
 # @param head LinkedListNode the head of a linked list
 # @param node LinkedListNode the linked list node to be deleted
 def delete_node(node):
-    if node:
+    if node and node.next:
         node.data = node.next.data
         node.next = node.next.next
 
