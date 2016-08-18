@@ -1,8 +1,9 @@
 class TreeNode:
-    def __init__(self, value, left=None, right=None):
+    def __init__(self, value, left=None, right=None, parent=None):
         self.value = value
         self.left = left
         self.right = right
+        self.parent = None
     
     def __str__(self):
         return str(self.value)
