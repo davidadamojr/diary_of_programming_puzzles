@@ -8,6 +8,7 @@ class TreeNode:
     def __str__(self):
         return str(self.value)
 
+
 class BinarySearchTree:
     def __init__(self, root):
         self.root = root
@@ -28,7 +29,6 @@ class BinarySearchTree:
                 else:
                     current_node.right = TreeNode(key)
                     break
-                
 
     def __str__(self):
         queue = [self.root]
@@ -44,6 +44,7 @@ class BinarySearchTree:
                 queue.insert(0, current_node.right)
 
         return tree_str
+
 
 class BinaryTree:
     def __init__(self, root):
