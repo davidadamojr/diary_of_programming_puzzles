@@ -1,9 +1,11 @@
 """
 An iterative implementation of binary search
 """
+
+
 def binary_search(sorted_list, key):
     low = 0
-    high = len(sorted_list)-1
+    high = len(sorted_list) - 1
 
     while low <= high:
         midpoint = (low + high) / 2
@@ -18,5 +20,6 @@ def binary_search(sorted_list, key):
 
     return "Could not find element"
 
-sorted_list = [1,3,4,5,6,7,33,55,66,73]
-print binary_search(sorted_list, 3)
+
+sorted_list = [1, 3, 4, 5, 6, 7, 33, 55, 66, 73]
+print(binary_search(sorted_list, 3))

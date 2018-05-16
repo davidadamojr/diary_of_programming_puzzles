@@ -21,7 +21,7 @@ def find_missing_number_1(nums):
     for num in nums:
         nums_set.add(num)
 
-    for i in range(len(nums)+1):
+    for i in range(len(nums) + 1):
         if i not in nums_set:
             return i
 
@@ -30,7 +30,7 @@ def find_missing_number_1(nums):
 
 def find_missing_number_2(nums):
     n = len(nums)
-    n_sum = (n * (n+1)) / 2
+    n_sum = (n * (n + 1)) / 2
 
     num_sum = 0
     for num in nums:
@@ -38,12 +38,10 @@ def find_missing_number_2(nums):
 
     return n_sum - num_sum
 
+
 assert find_missing_number_1([3, 0, 1]) == 2
 assert find_missing_number_2([3, 0, 1]) == 2
 assert find_missing_number_1([9, 6, 4, 2, 3, 5, 7, 0, 1]) == 8
 assert find_missing_number_2([9, 6, 4, 2, 3, 5, 7, 0, 1]) == 8
 assert find_missing_number_1([0]) == 1
 assert find_missing_number_2([0]) == 1
-
-
-

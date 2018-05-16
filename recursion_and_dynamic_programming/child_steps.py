@@ -4,6 +4,7 @@ A child is running up a staircase with n steps, and can hope either 1 step,
 ways the child can run up the stairs.
 """
 
+
 def count_ways(number_of_steps):
     """
     The total number of ways of reaching the last step is therefore the
@@ -16,10 +17,5 @@ def count_ways(number_of_steps):
     if number_of_steps == 0:
         return 1
 
-    return count_ways(number_of_steps-1) + count_ways(number_of_steps-2) + \
-        count_ways(number_of_steps-3)
-
-
-
-
-
+    return count_ways(number_of_steps - 1) + count_ways(number_of_steps - 2) + \
+           count_ways(number_of_steps - 3)

@@ -44,8 +44,9 @@ def traverse(node):
     if node.left:
         traverse(node.left)
 
+
 tree_root = TreeNode(5, TreeNode(2), TreeNode(13))
 convert_bst(tree_root)
-print tree_root
-print tree_root.left
-print tree_root.right
+print(tree_root)
+print(tree_root.left)
+print(tree_root.right)

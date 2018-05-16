@@ -9,6 +9,7 @@ given a "str" of "Battle of the Vowels: Hawaii vs. Grozny" and a "remove" of
 "aeiou", the function should transform str to "Bttl f th Vwls: Hw vs. Grzny".
 """
 
+
 def remove_specified_chars1(string, removechars):
     """
     uses a hash table for "removechars" lookup instead of linearly checking 
@@ -31,6 +32,7 @@ def remove_specified_chars1(string, removechars):
 
     return new_string
 
+
 def remove_specified_chars2(string, removechars):
     """
     * uses a hash table for removechars lookup and writes the new string in place 
@@ -51,16 +53,13 @@ def remove_specified_chars2(string, removechars):
 
     src_index = 0
     dest_index = 0
-    for src_index in xrange(0, len(string_list)):
+    for src_index in range(0, len(string_list)):
         if string_list[src_index] not in chars_dict:
             string_list[dest_index] = string_list[src_index]
             dest_index = dest_index + 1
 
-    return ''.join(string_list[0:dest_index+1])
-
-print remove_specified_chars1('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou')
-print remove_specified_chars2('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou')
+    return ''.join(string_list[0:dest_index + 1])
 
 
-
-
+print(remove_specified_chars1('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
+print(remove_specified_chars2('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))

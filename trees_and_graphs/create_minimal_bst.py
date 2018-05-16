@@ -4,21 +4,21 @@ an algorithm to create a binary search tree with minimal height.
 """
 from trees import *
 
+
 # @param list_of_integers a list of sorted integers in ascending order
 # @param start starting index of list
 # @param end ending index of list
 def create_minimal_bst(list_of_integers, start, end):
     if end < start:
         return None
-    
+
     # get the middle element of the list
     middle = (start + end) / 2
-    root = TreeNode(list_of_integers[middle], create_minimal_bst(list_of_integers, start, middle-1),
-                create_minimal_bst(list_of_integers, middle+1, end))
+    root = TreeNode(list_of_integers[middle], create_minimal_bst(list_of_integers, start, middle - 1),
+                    create_minimal_bst(list_of_integers, middle + 1, end))
     return root
 
+
 if __name__ == '__main__':
-    bst_root = create_minimal_bst([2,4,6,7,92,101,333,334,888], 0, 8)
-    print BinarySearchTree(bst_root)
-    
-    
+    bst_root = create_minimal_bst([2, 4, 6, 7, 92, 101, 333, 334, 888], 0, 8)
+    print(BinarySearchTree(bst_root))

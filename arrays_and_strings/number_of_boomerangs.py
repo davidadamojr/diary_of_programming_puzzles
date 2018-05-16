@@ -31,7 +31,7 @@ def number_of_boomerangs(points):
 
         for distance in equidistant_points:
             # The number of ways you can pick two items from a set of n items is n*(n-1)
-            result = result + (equidistant_points[distance] * (equidistant_points[distance]-1))
+            result = result + (equidistant_points[distance] * (equidistant_points[distance] - 1))
 
     return result
 
@@ -40,11 +40,11 @@ def get_distance(point1, point2):
     dx = point1[0] - point2[0]
     dy = point1[1] - point2[1]
 
-    return dx*dx + dy*dy
+    return dx * dx + dy * dy
+
 
 if __name__ == '__main__':
     assert number_of_boomerangs([]) == 0
-    assert number_of_boomerangs([[0,0],[1,0],[2,0]]) == 2
-    assert number_of_boomerangs([[0,0],[1,0],[2,0],[0,2]]) == 4
-    print "All test cases passed successfully."
-
+    assert number_of_boomerangs([[0, 0], [1, 0], [2, 0]]) == 2
+    assert number_of_boomerangs([[0, 0], [1, 0], [2, 0], [0, 2]]) == 4
+    print("All test cases passed successfully.")

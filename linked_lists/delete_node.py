@@ -10,6 +10,7 @@ https://leetcode.com/problems/delete-node-in-a-linked-list/
 
 from linked_list import LinkedListNode
 
+
 # @param head LinkedListNode the head of a linked list
 # @param node LinkedListNode the linked list node to be deleted
 def delete_node(node):
@@ -17,12 +18,13 @@ def delete_node(node):
         node.data = node.next.data
         node.next = node.next.next
 
+
 if __name__ == '__main__':
     head = LinkedListNode(1)
     head.next = LinkedListNode(2)
     head.next.next = LinkedListNode(3)
     head.next.next.next = LinkedListNode(4)
-    
+
     delete_node(head.next.next)
     assert str(head) == "1, 2, 4"
-    print "All test cases passed." 
+    print("All test cases passed.")

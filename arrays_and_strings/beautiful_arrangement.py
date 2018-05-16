@@ -17,7 +17,8 @@ def count_arrangements(n):
     used = {}
 
     def make_arrangement(current_pos, n):
-        nonlocal count
+        nonlocal
+        count
         if current_pos > n:
             count += 1
             return
@@ -27,9 +28,9 @@ def count_arrangements(n):
                 continue
 
             if number % current_pos == 0 or current_pos % number == 0:
-                arrangement[current_pos-1] = number
+                arrangement[current_pos - 1] = number
                 used[number] = True
-                make_arrangement(current_pos+1, n)
+                make_arrangement(current_pos + 1, n)
 
             used[number] = False
 
@@ -41,4 +42,3 @@ def count_arrangements(n):
 assert count_arrangements(2) == 2
 assert count_arrangements(1) == 1
 print("All tests passed successfully.")
-

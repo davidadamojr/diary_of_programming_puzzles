@@ -8,11 +8,13 @@ node down to the farthest leaf node.
 from trees import TreeNode
 from trees import BinaryTree
 
+
 def maximum_depth(node):
     if not node:
         return 0
-    
+
     return 1 + max(maximum_depth(node.left), maximum_depth(node.right))
+
 
 if __name__ == '__main__':
     root_node = TreeNode(10)
@@ -21,7 +23,6 @@ if __name__ == '__main__':
     root_node.left.left = TreeNode(1)
     root_node.left.left.left = TreeNode(1)
     binary_tree = BinaryTree(root_node)
-    
+
     assert maximum_depth(binary_tree.root) == 4
-    print "All test cases passed."
-    
+    print("All test cases passed.")

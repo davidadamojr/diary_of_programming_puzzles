@@ -8,8 +8,9 @@ but "(]" and "([)]" are not.
 Leetcode problem: https://leetcode.com/problems/valid-parentheses/
 """
 
+
 def is_valid_parentheses(input_string):
-    character_map = {'(':')', '{':'}', '[':']'}
+    character_map = {'(': ')', '{': '}', '[': ']'}
     stack = []
     string_list = list(input_string)
     string_is_valid = True
@@ -19,18 +20,18 @@ def is_valid_parentheses(input_string):
         else:
             if len(stack) == 0:
                 return False
-            
+
             top = stack.pop()
             if character_map[top] != character:
                 return False
-            
-    
+
     if len(stack) != 0:
         return False
-    
+
     return string_is_valid
 
+
 if __name__ == '__main__':
-    print is_valid_parentheses("{{}}")
-    print is_valid_parentheses("[[{]]{")
-    print is_valid_parentheses("[")
+    print(is_valid_parentheses("{{}}"))
+    print(is_valid_parentheses("[[{]]{"))
+    print(is_valid_parentheses("["))

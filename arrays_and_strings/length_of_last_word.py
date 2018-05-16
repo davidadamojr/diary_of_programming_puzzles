@@ -12,28 +12,27 @@ Given s = "Hello World", return 5.
 Leetcode problem: https://leetcode.com/problems/length-of-last-word/
 """
 
+
 def last_word_length(input_string):
     # linear time solution
-    
+
     trimmed_string = input_string.strip()
     if trimmed_string == "":
         return 0
-    
+
     # start at the end of the string
     position = len(trimmed_string) - 1
     while position >= 0:
         if trimmed_string[position] == " ":
             break
-        
+
         position = position - 1
-    
-    last_word = trimmed_string[position+1:]
+
+    last_word = trimmed_string[position + 1:]
     return len(last_word)
 
+
 if __name__ == '__main__':
-    print last_word_length("Hello World")
-    print last_word_length("To   whom  much is given  ")
-    print last_word_length("")
-    
-    
-    
+    print(last_word_length("Hello World"))
+    print(last_word_length("To   whom  much is given  "))
+    print(last_word_length(""))

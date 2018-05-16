@@ -19,6 +19,7 @@ key_strings = {'2': 'abc',
                '8': 'tuv',
                '9': 'wxy'}
 
+
 def get_char_key(key, place):
     is_one = key == '1';
     is_zero = key == '0';
@@ -27,7 +28,8 @@ def get_char_key(key, place):
     elif is_zero:
         return '0'
     else:
-        return key_strings[key][place-1]
+        return key_strings[key][place - 1]
+
 
 def translate_number(phone_number):
     phone_number_length = len(phone_number)
@@ -38,9 +40,9 @@ def translate_number(phone_number):
 
     while 1:
         # infinite loop that breaks when all the numbers are at their "high" value
-        print ''.join(translation)
+        print(''.join(translation))
 
-        for i in range(phone_number_length-1, -2, -1):
+        for i in range(phone_number_length - 1, -2, -1):
             if i == -1:
                 # once it goes past the leftmost digit, we are done
                 return
@@ -52,7 +54,7 @@ def translate_number(phone_number):
             is_medium = get_char_key(phone_number[i], 2) == translation[i]
             if is_high or is_one or is_zero:
                 translation[i] = get_char_key(phone_number[i], 1)
-                #no break, continue to left neighbor
+                # no break, continue to left neighbor
             elif is_low:
                 translation[i] = get_char_key(phone_number[i], 2)
                 break
@@ -60,7 +62,5 @@ def translate_number(phone_number):
                 translation[i] = get_char_key(phone_number[i], 3)
                 break
 
+
 translate_number("5955942")
-
-
-

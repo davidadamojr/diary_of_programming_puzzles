@@ -26,6 +26,7 @@ def array_partition(nums):
 
     return sum
 
+
 if __name__ == "__main__":
-    assert array_partition([1,4,3,2]) == 4
+    assert array_partition([1, 4, 3, 2]) == 4
     print("All tests passed successfully.")

@@ -5,6 +5,7 @@ ways the child can run up the stairs.
 """
 map = {}
 
+
 def count_ways_dp(number_of_steps):
     """
     Dynamic programming solution
@@ -18,6 +19,6 @@ def count_ways_dp(number_of_steps):
     if number_of_steps in map:
         return map[number_of_steps]
     else:
-        map[number_of_steps] = count_ways_dp(number_of_steps-1) + count_ways_dp(number_of_steps-2) + count_ways_dp(number_of_steps-3)
+        map[number_of_steps] = count_ways_dp(number_of_steps - 1) + count_ways_dp(number_of_steps - 2) + count_ways_dp(
+            number_of_steps - 3)
         return map[number_of_steps];
-

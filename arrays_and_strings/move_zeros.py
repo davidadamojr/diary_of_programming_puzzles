@@ -11,8 +11,9 @@ Note:
 https://leetcode.com/problems/move-zeroes/
 """
 
+
 def move_zeros(num):
-    trailing_idx= 0
+    trailing_idx = 0
     leading_idx = 1
     num_len = len(num)
     while leading_idx < num_len:
@@ -26,10 +27,11 @@ def move_zeros(num):
         else:
             trailing_idx = trailing_idx + 1
             leading_idx = leading_idx + 1
-    
+
     return num
+
 
 if __name__ == '__main__':
     assert move_zeros([0, 1, 0, 3, 12]) == [1, 3, 12, 0, 0]
     assert move_zeros([0, 0, 0, 0, 0]) == [0, 0, 0, 0, 0]
-    print "All test cases passed"
+    print("All test cases passed")

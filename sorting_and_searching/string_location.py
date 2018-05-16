@@ -3,6 +3,7 @@ Given a sorted array of strings which is interspersed with empty strings, write 
 a given string.
 """
 
+
 # @param string str the string to be located
 # @param string str_lst list of strings interspersed with empty strings
 def find_string_location(str, str_lst, start, end):
@@ -33,13 +34,14 @@ def find_string_location(str, str_lst, start, end):
     if str_lst[middle] == str:
         return middle
     elif str > middle_str:
-        return find_string_location(str, str_lst, middle+1, end)
+        return find_string_location(str, str_lst, middle + 1, end)
     elif str < middle_str:
-        return find_string_location(str, str_lst, start, middle-1)
+        return find_string_location(str, str_lst, start, middle - 1)
+
 
 if __name__ == "__main__":
     assert find_string_location("danger", ["apple", "", "", "danger", "edible", "viscous", "", "zip"], 0, 7) == 3
     assert find_string_location("apple", ["apple", "", "", "danger", "edible", "viscous", "", "zip"], 0, 7) == 0
     assert find_string_location("zip", ["apple", "", "", "danger", "edible", "viscous", "", "zip"], 0, 7) == 7
     assert find_string_location("", ["apple", "", "", "danger", "edible", "viscous", "", "zip"], 0, 7) == -1
-    print "All test cases passed successfully."
+    print("All test cases passed successfully.")

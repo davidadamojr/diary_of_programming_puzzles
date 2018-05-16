@@ -5,6 +5,7 @@ numbers that are less than the partitioning element come before all elements
 that are greater than it.
 """
 
+
 def quicksort(unsorted_list, left, right):
     partition_index = partition_list(unsorted_list, left, right)
     if left < partition_index - 1:
@@ -32,8 +33,8 @@ def partition_list(unsorted_list, left, right):
 
     return left
 
+
 if __name__ == '__main__':
     unsorted_list = [10, 8, 3, 2, 22, 34, 10, 32]
-    quicksort(unsorted_list, 0, len(unsorted_list)-1)
-    print unsorted_list
-
+    quicksort(unsorted_list, 0, len(unsorted_list) - 1)
+    print(unsorted_list)

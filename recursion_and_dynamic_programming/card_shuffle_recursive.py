@@ -8,6 +8,7 @@ import random
 
 card_deck = [j for j in range(0, 52)]
 
+
 def shuffle(card_deck, i):
     """
     Recursively move through the array and for each element i, swap array[i]
@@ -20,8 +21,7 @@ def shuffle(card_deck, i):
     to_be_swapped = random.randint(0, i)
     card_deck[i], card_deck[to_be_swapped] = card_deck[to_be_swapped], card_deck[i]
 
-    return shuffle(card_deck, i+1)
-
-print shuffle(card_deck, 1)
+    return shuffle(card_deck, i + 1)
 
 
+print(shuffle(card_deck, 1))

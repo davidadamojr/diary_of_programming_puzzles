@@ -26,6 +26,7 @@ def string_to_integer1(string):
 
     return integer_value
 
+
 def string_to_integer2(string):
     """
     Start at the right end of string, starting with a place value of 1
@@ -53,19 +54,7 @@ def string_to_integer2(string):
     return integer_value
 
 
-print string_to_integer1("-234")
-print string_to_integer1("234")
-print string_to_integer2("234")
-print string_to_integer2("-234")
-
-
-
-
-
-
-
-
-
-
-
-
+print(string_to_integer1("-234"))
+print(string_to_integer1("234"))
+print(string_to_integer2("234"))
+print(string_to_integer2("-234"))

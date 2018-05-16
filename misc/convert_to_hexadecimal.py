@@ -24,6 +24,7 @@ Output:
 "ffffffff"
 """
 
+
 # @param num the number to convert to hexadecimal
 # @return the hexadecimal representation of the number
 def to_hex(num):
@@ -31,12 +32,12 @@ def to_hex(num):
         return "0"
 
     hex_digits = {
-        10 : "a",
-        11 : "b",
-        12 : "c",
-        13 : "d",
-        14 : "e",
-        15 : "f"
+        10: "a",
+        11: "b",
+        12: "c",
+        13: "d",
+        14: "e",
+        15: "f"
     }
 
     hex_num = ""
@@ -63,8 +64,9 @@ def to_hex(num):
 
     return hex_num
 
+
 if __name__ == '__main__':
     assert to_hex(0) == "0"
     assert to_hex(-1) == "ffffffff"
     assert to_hex(26) == "1a"
-    print "All test cases passed successfully."
+    print("All test cases passed successfully.")

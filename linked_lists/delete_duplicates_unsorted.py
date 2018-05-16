@@ -6,6 +6,7 @@ How would you solve this problem if a temporary buffer is not allowed?
 import random
 from linked_list import LinkedListNode
 
+
 def delete_duplicates(linked_list_node):
     """
     Using a hash table to keep track of nodes already found
@@ -28,6 +29,7 @@ def delete_duplicates(linked_list_node):
         current_node = current_node.next
 
     return str(linked_list_node)
+
 
 def delete_dup_no_buffer(linked_list_node):
     """
@@ -56,6 +58,7 @@ def delete_dup_no_buffer(linked_list_node):
 
     return str(linked_list_node)
 
+
 root = LinkedListNode(5)
 current_node = root
 for i in range(0, 10):
@@ -64,7 +67,6 @@ for i in range(0, 10):
     current_node.next = new_node
     current_node = new_node
 
-print "Original list: " + str(root)
-print "Unique list 1: " + delete_duplicates(root)
-print "Unique list 2: " + delete_dup_no_buffer(root)
-
+print("Original list: " + str(root))
+print("Unique list 1: " + delete_duplicates(root))
+print("Unique list 2: " + delete_dup_no_buffer(root))

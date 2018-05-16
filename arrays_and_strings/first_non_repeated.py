@@ -3,6 +3,8 @@ Write an efficient function to find the first non-repeated character in a string
 For instance, the first nonrepeated character in "total" is 'o' and the first
 nonrepeated character in "teeter" is r.
 """
+
+
 def findFirstNonRepeated(string):
     """
     create a dictionary that maps each character to the number of times it occurs and then do a O(1) lookup - O(n) runtime
@@ -20,6 +22,5 @@ def findFirstNonRepeated(string):
 
     return None
 
-print findFirstNonRepeated("teet")
 
-
+print(findFirstNonRepeated("teet"))

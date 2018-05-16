@@ -4,9 +4,11 @@ Implement a function to check if a linked list is a palindrome
 import random
 from linked_list import LinkedListNode
 
+
 def is_palindrome1(linked_list):
     # reverse and compare
     pass
+
 
 def build_palindrome_list():
     root = LinkedListNode(5)
@@ -18,7 +20,7 @@ def build_palindrome_list():
 
     stack = []
     current_node = root
-    while current_node.next != None: # all but the last one
+    while current_node.next != None:  # all but the last one
         stack.append(current_node.data)
         current_node = current_node.next
 
@@ -29,8 +31,6 @@ def build_palindrome_list():
         previous_node = new_node
 
     return root
-
-
 
 
 def build_random_list():

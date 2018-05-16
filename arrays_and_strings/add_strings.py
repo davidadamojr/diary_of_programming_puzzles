@@ -8,19 +8,19 @@ Note:
 4. You must not use any built-in BigInteger library or convert the inputs to integer directly.
 """
 
+
 # @param num1 string
 # @param num2 string
 # @return result string
 
 def add_strings(num1, num2):
-
     num1_idx = len(num1) - 1
     num2_idx = len(num2) - 1
     carry = 0
 
     result = ""
 
-    while num1_idx >= 0 and num2_idx >=0:
+    while num1_idx >= 0 and num2_idx >= 0:
         digit_sum = convert_to_int(num1[num1_idx]) + convert_to_int(num2[num2_idx]) + carry
         result_digit = digit_sum % 10
         carry = digit_sum / 10
@@ -59,6 +59,7 @@ def convert_to_int(num):
 
     return result
 
+
 if __name__ == '__main__':
     assert add_strings("22", "22") == "44"
     assert add_strings("22", "2222") == "2244"
@@ -66,6 +67,4 @@ if __name__ == '__main__':
     assert add_strings("99", "99") == "198"
     assert add_strings("99", "999") == "1098"
     assert add_strings("999", "99") == "1098"
-    print "All test cases passed successfully."
-
-
+    print("All test cases passed successfully.")

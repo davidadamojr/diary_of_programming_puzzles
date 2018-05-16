@@ -7,23 +7,24 @@ THIS DOES NOT WORK
 import random
 from linked_list import LinkedListNode
 
+
 def create_circular_list(length_before_loop, loop_length):
     root = LinkedListNode(random.randint(0, 9))
     previous_node = root
 
     # create the section before the loop
     for i in range(0, length_before_loop):
-        new_node = LinkedListNode(random.randint(0,10))
+        new_node = LinkedListNode(random.randint(0, 10))
         previous_node.next = new_node
         previous_node = new_node
 
     # this is the node the loop points to
     loop_back_node = previous_node
-    print "The beginning of the loop is: " + str(loop_back_node)
+    print("The beginning of the loop is: " + str(loop_back_node))
 
     # create the nodes in the loop
     for i in range(0, loop_length):
-        new_node = LinkedListNode(random.randint(0,10))
+        new_node = LinkedListNode(random.randint(0, 10))
         previous_node.next = new_node
         previous_node = new_node
 
@@ -32,6 +33,7 @@ def create_circular_list(length_before_loop, loop_length):
     previous_node.next = loop_back_node
 
     return root
+
 
 def find_loop_beginning(circular_linked_list):
     """
@@ -64,7 +66,6 @@ def find_loop_beginning(circular_linked_list):
 
     return fast_pointer
 
+
 circular_list = create_circular_list(5, 4)
 # print find_loop_beginning(circular_list)
-
-

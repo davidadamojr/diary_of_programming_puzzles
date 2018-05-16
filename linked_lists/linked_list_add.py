@@ -10,6 +10,7 @@ Suppose the digits are stored in forward order. Repeat the above problem.
 import random
 from linked_list import LinkedListNode
 
+
 def linked_list_add(first_linked_list, second_linked_list, carry):
     """
     The numbers are stored in reverse order
@@ -24,7 +25,7 @@ def linked_list_add(first_linked_list, second_linked_list, carry):
     if second_linked_list:
         value = value + second_linked_list.data
 
-    result = value % 10 # the last digit
+    result = value % 10  # the last digit
     result_linked_list = LinkedListNode(result)
 
     if first_linked_list or second_linked_list:
@@ -35,6 +36,7 @@ def linked_list_add(first_linked_list, second_linked_list, carry):
         result_linked_list.next = next_node
 
     return result_linked_list
+
 
 def linked_list_add_forward(linked_list_one, linked_list_two, carry):
     # convert the first list to an integer
@@ -66,9 +68,9 @@ def linked_list_add_forward(linked_list_one, linked_list_two, carry):
 
 
 def create_random_linked_list(number_of_nodes):
-    root = LinkedListNode(random.randint(0,9))
+    root = LinkedListNode(random.randint(0, 9))
     current_node = root
-    for i in range(0, number_of_nodes-1):
+    for i in range(0, number_of_nodes - 1):
         random_key = random.randint(0, 9)
         new_node = LinkedListNode(random_key)
         current_node.next = new_node
@@ -76,14 +78,14 @@ def create_random_linked_list(number_of_nodes):
 
     return root
 
+
 first_number = create_random_linked_list(4)
 second_number = create_random_linked_list(4)
-print "First number: " + str(first_number)
-print "Second number: " + str(second_number)
-print str(linked_list_add(first_number, second_number, 0))
-print "==================================================="
+print("First number: " + str(first_number))
+print("Second number: " + str(second_number))
+print(str(linked_list_add(first_number, second_number, 0)))
+print("===================================================")
 
-print "First number: " + str(first_number)
-print "Second number: " + str(second_number)
-print str(linked_list_add_forward(first_number, second_number, 0))
-
+print("First number: " + str(first_number))
+print("Second number: " + str(second_number))
+print(str(linked_list_add_forward(first_number, second_number, 0)))

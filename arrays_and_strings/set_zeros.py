@@ -9,6 +9,7 @@ elements being zero. This needs to be avoided
 row_dict = {}
 col_dict = {}
 
+
 def set_zeros(matrix):
     for row in range(0, len(matrix)):
         for col in range(0, len(matrix[0])):
@@ -19,6 +20,7 @@ def set_zeros(matrix):
     nullify_column(matrix)
     nullify_row(matrix)
     return matrix
+
 
 def nullify_column(matrix):
     for column in col_dict:
@@ -32,5 +34,5 @@ def nullify_row(matrix):
             matrix[row][index] = 0
 
 
-matrix = [[1,0,3,5], [2,5,6,2], [9,3,0,8], [3,4,5,7], [0,8,3,1]]
-print set_zeros(matrix)
+matrix = [[1, 0, 3, 5], [2, 5, 6, 2], [9, 3, 0, 8], [3, 4, 5, 7], [0, 8, 3, 1]]
+print(set_zeros(matrix))

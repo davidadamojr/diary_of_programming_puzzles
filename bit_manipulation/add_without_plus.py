@@ -2,6 +2,8 @@
 Write a function that adds two numbers. You should not use + or any
 arithmetic operators.
 """
+
+
 def add(first_number, second_number):
     if second_number == 0:
         return first_number
@@ -16,4 +18,5 @@ def add(first_number, second_number):
     # need to recurse since you are not allowed to use arithmetic operators
     return add(sum_without_carry, carry)
 
-print str(add(10, 15))
+
+print(str(add(10, 15)))

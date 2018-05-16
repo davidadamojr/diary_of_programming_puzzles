@@ -5,6 +5,7 @@ less than x come before all nodes greater than or equal to x
 from linked_list import LinkedListNode
 import random
 
+
 def partition(linked_list, by_value):
     if not linked_list:
         return None
@@ -44,7 +45,6 @@ def partition(linked_list, by_value):
         return smaller_than_list
 
 
-
 root = LinkedListNode(5)
 current_node = root
 for i in range(0, 10):
@@ -55,5 +55,5 @@ for i in range(0, 10):
     if i == 4:
         middle_node = current_node.data
 
-print "Original list: " + str(root)
-print "Partitioned list: " + str(partition(root, middle_node))
+print("Original list: " + str(root))
+print("Partitioned list: " + str(partition(root, middle_node)))

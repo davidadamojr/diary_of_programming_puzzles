@@ -6,6 +6,7 @@ original string, your method should return the original string. You can assume
 the string has only upper and lower case letters (a-z)
 """
 
+
 def compress_string(uncompressed_string):
     compressed_size = calc_compressed_size(uncompressed_string)
     uncompressed_size = len(uncompressed_string)
@@ -16,7 +17,7 @@ def compress_string(uncompressed_string):
     count = 1
     last_char = uncompressed_string[0]
 
-    for i in xrange(1, uncompressed_size):
+    for i in range(1, uncompressed_size):
         same_character = last_char == uncompressed_string[i]
         if same_character:
             count = count + 1
@@ -39,7 +40,7 @@ def calc_compressed_size(uncompressed_string):
     count = 1
     size = 0
 
-    for i in xrange(1, uncompressed_length):
+    for i in range(1, uncompressed_length):
         same_character = uncompressed_string[i] == last_char
         if same_character:
             count = count + 1
@@ -53,5 +54,5 @@ def calc_compressed_size(uncompressed_string):
     return size
 
 
-print compress_string("aaabbbcccdddaaabbc")
-print compress_string("abcdeff")
+print(compress_string("aaabbbcccdddaaabbc"))
+print(compress_string("abcdeff"))

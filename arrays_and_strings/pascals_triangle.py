@@ -15,11 +15,12 @@ Return:
 Leetcode problem: https://leetcode.com/problems/pascals-triangle/
 """
 
+
 # @param {integer} numRows
 # @return {integer[][]}
 def generate(numRows):
     pascals_triangle = []
-    
+
     row = 0
     while row < numRows:
         if len(pascals_triangle) == 0:
@@ -27,15 +28,16 @@ def generate(numRows):
         else:
             current_row = pascals_triangle[-1]
             new_row = [current_row[0]]
-            for i in xrange(1, len(current_row)):
-                new_row.append(current_row[i] + current_row[i-1])
+            for i in range(1, len(current_row)):
+                new_row.append(current_row[i] + current_row[i - 1])
             new_row.append(1)
             pascals_triangle.append(new_row)
-        
+
         row = row + 1
-    
+
     return pascals_triangle
 
+
 if __name__ == '__main__':
-    print generate(5)
-    print generate(10)
+    print(generate(5))
+    print(generate(10))

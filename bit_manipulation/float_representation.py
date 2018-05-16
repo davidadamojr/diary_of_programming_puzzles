@@ -4,6 +4,7 @@ print the binary representation. If the number cannot be represented accurately
 in binary with at most 32 characters, print "ERROR"
 """
 
+
 def get_binary_rep(real_number):
     """
     Compare the number to 0.5, 0.25, ...
@@ -29,7 +30,5 @@ def get_binary_rep(real_number):
 
     return binary_rep
 
-print get_binary_rep(0.72)
 
-
-
+print(get_binary_rep(0.72))

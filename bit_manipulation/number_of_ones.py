@@ -2,6 +2,8 @@
 Write a function that determines the number of 1 bits in the binary
 representation of a given integer
 """
+
+
 def number_of_ones(integer_value):
     """
     You can AND integer value with a "mask": 1
@@ -20,7 +22,8 @@ def number_of_ones(integer_value):
 
         integer_value = integer_value >> 1
 
-    print "The number of 1 bits in %d is %d" % (original_value, one_count)
+    print("The number of 1 bits in %d is %d" % (original_value, one_count))
+
 
 def number_of_ones2(integer_value):
     """
@@ -33,7 +36,7 @@ def number_of_ones2(integer_value):
     
     This is more efficient O(m) where m is the number of 1 bits
     """
-    
+
     one_count = 0
     original_value = integer_value
     while integer_value != 0:
@@ -41,8 +44,8 @@ def number_of_ones2(integer_value):
         integer_value = one_subtracted & integer_value
         one_count = one_count + 1
 
-    print "The number of 1 bits in %d is %d" %(original_value, one_count)
+    print("The number of 1 bits in %d is %d" % (original_value, one_count))
+
 
 number_of_ones(365)
 number_of_ones2(365)
-

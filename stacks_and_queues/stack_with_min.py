@@ -4,6 +4,7 @@ min which returns the minimum element? Push, pop and min should all operate in
 O(1) time.
 """
 
+
 class Stack(object):
     def __init__(self):
         self.stack = []

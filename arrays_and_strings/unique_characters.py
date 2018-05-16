@@ -4,6 +4,8 @@ characters? What if you cannot use any additional data structures?
 
 - In Java, you can use a boolean array of length 128 (for ascii)
 """
+
+
 def unique_characters(my_string):
     if my_string == "":
         return True
@@ -16,6 +18,7 @@ def unique_characters(my_string):
             character_count[character] = 1
 
     return True
+
 
 def unique_characters_no_ds(my_string):
     """
@@ -33,14 +36,9 @@ def unique_characters_no_ds(my_string):
 
     return True
 
+
 if unique_characters("dane"):
-    print "The characters are unique"
+    print("The characters are unique")
 
 if unique_characters_no_ds("dane"):
-    print "The characters are unique"
-
-
-
-
-
-
+    print("The characters are unique")

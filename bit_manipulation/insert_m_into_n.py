@@ -7,10 +7,11 @@ between j and i. You would not, for example, have j=3 and i=2, because M could
 fully fit between bit 3 and bit 2
 """
 
+
 def updateBits(n, m, j, i):
     # clear bits j through i
     all_ones = ~0
-    ones_before_j = all_ones << (j+1)
+    ones_before_j = all_ones << (j + 1)
     ones_after_i = (1 << i) - 1
     mask = ones_before_j | ones_after_i
     n_cleared = n & mask
@@ -21,4 +22,5 @@ def updateBits(n, m, j, i):
 
     return inserted
 
-print bin(updateBits(1024, 19, 6, 2))
+
+print(bin(updateBits(1024, 19, 6, 2)))

@@ -15,7 +15,7 @@ def find_duplicates(nums):
     for num in nums:
         already_found[num] = already_found.get(num, 0) + 1
 
-    for num, times_found in already_found.items():
+    for num, times_found in list(already_found.items()):
         if times_found > 1:
             duplicates.append(num)
 
@@ -34,13 +34,12 @@ def find_duplicates_linear_time(nums):
     return duplicates
 
 
-
 if __name__ == "__main__":
     assert find_duplicates([]) == []
-    assert find_duplicates([1,2,3,4,5]) == []
-    assert find_duplicates([1,4,2,3,5]) == []
-    assert find_duplicates([1,3,4,2,3,6,7,4,5]) == [3, 4]
-    assert find_duplicates([1,2,3,3,4,4,5,6,7]) == [3,4]
+    assert find_duplicates([1, 2, 3, 4, 5]) == []
+    assert find_duplicates([1, 4, 2, 3, 5]) == []
+    assert find_duplicates([1, 3, 4, 2, 3, 6, 7, 4, 5]) == [3, 4]
+    assert find_duplicates([1, 2, 3, 3, 4, 4, 5, 6, 7]) == [3, 4]
 
     assert find_duplicates_linear_time([]) == []
     assert find_duplicates_linear_time([1, 2, 3, 4, 5]) == []

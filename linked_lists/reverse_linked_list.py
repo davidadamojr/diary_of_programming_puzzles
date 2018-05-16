@@ -6,14 +6,14 @@ import random
 
 head = LinkedListNode(random.randint(0, 20))
 previous = head
-for i in xrange(0, 5):
+for i in range(0, 5):
     node = LinkedListNode(random.randint(0, 20))
     previous.next = node
     previous = node
 
 node.next = None
 
-print head
+print(head)
 
 current = head
 next = current.next
@@ -24,6 +24,4 @@ while next:
     current = next
     next = old_next
 
-print current
-
-
+print(current)

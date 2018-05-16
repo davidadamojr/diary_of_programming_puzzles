@@ -42,8 +42,9 @@ def longest_palindrome(input_str):
 
     return even_sum
 
+
 if __name__ == '__main__':
     assert longest_palindrome("abccccdd") == 7
     assert longest_palindrome("aaaabbbcccdddeeeeee") == 17
     assert longest_palindrome("aaaabbbb") == 8
-    print "All test cases passed successfully."
+    print("All test cases passed successfully.")

@@ -14,25 +14,27 @@ Note: The sequence of integers will be represented as a string
 Leetcode question: https://leetcode.com/problems/count-and-say/
 """
 
+
 def count_and_say(n):
     nth_str = "1"
-    for i in xrange(2,n+1):
+    for i in range(2, n + 1):
         character_count = 0
         new_str = ""
         current_character = nth_str[0]
-        for j in xrange(0, len(nth_str)):
-            if nth_str[j] == current_character: 
+        for j in range(0, len(nth_str)):
+            if nth_str[j] == current_character:
                 character_count = character_count + 1
             else:
                 new_str = new_str + str(character_count) + current_character
                 current_character = nth_str[j]
                 character_count = 1
-        
+
         new_str = new_str + str(character_count) + current_character
         nth_str = new_str
-    
+
     return nth_str
 
+
 if __name__ == '__main__':
-    print count_and_say(5)
-    print count_and_say(7)
+    print(count_and_say(5))
+    print(count_and_say(7))

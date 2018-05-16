@@ -6,8 +6,9 @@ Given two integers num1 and num2, calculate the Hamming distance.
 https://leetcode.com/problems/hamming-distance/
 """
 
-#@param num1 integer
-#@param num2 integer
+
+# @param num1 integer
+# @param num2 integer
 def hamming_distance(num1, num2):
     distance = 0
     while num1 > 0 and num2 > 0:
@@ -34,9 +35,10 @@ def hamming_distance(num1, num2):
 
     return distance
 
+
 if __name__ == '__main__':
     assert hamming_distance(1, 4) == 2
     assert hamming_distance(0, 0) == 0
     assert hamming_distance(8, 4) == 2
     assert hamming_distance(4, 8) == 2
-    print "All test cases passed successfully."
+    print("All test cases passed successfully.")

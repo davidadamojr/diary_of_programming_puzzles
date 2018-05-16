@@ -80,6 +80,7 @@ def depth_first(current_t1_node, current_t2_node, current_merged_node):
     elif not t1_right and t2_right:
         current_merged_node.right = t2_right
 
+
 if __name__ == '__main__':
     tree1 = TreeNode(1)
     tree1.right = TreeNode(2)

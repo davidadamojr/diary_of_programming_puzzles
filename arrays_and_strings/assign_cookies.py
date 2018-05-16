@@ -35,8 +35,8 @@ def get_content_children(greed_factors, cookies):
 
     return content_children
 
-assert get_content_children([1,2,3], [1,1]) == 1
-assert get_content_children([1,2], [1,2,3]) == 2
-assert get_content_children([2,2,3], [1,1,1]) == 0
-print "All test cases passed successfully."
 
+assert get_content_children([1, 2, 3], [1, 1]) == 1
+assert get_content_children([1, 2], [1, 2, 3]) == 2
+assert get_content_children([2, 2, 3], [1, 1, 1]) == 0
+print("All test cases passed successfully.")

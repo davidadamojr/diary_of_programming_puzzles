@@ -17,7 +17,6 @@ from trees import TreeNode
 
 
 def sum_of_left_leaves(root):
-
     if not root:
         return 0
 
@@ -25,6 +24,7 @@ def sum_of_left_leaves(root):
         return root.left.value + sum_of_left_leaves(root.right)
 
     return sum_of_left_leaves(root.left) + sum_of_left_leaves(root.right)
+
 
 if __name__ == "__main__":
     root1 = TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7)))
@@ -38,4 +38,4 @@ if __name__ == "__main__":
 
     root4 = TreeNode(3, TreeNode(9, TreeNode(10), TreeNode(11)), TreeNode(20, TreeNode(15), TreeNode(17)))
 
-    print "All test cases passed successfully"
+    print("All test cases passed successfully")

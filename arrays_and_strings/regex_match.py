@@ -6,13 +6,14 @@ regex = "ab*" and pattern ="abb" should return true.
 Assume the regular expression can only contain alphabets and *
 """
 
+
 def regex_match(regex, pattern):
     if len(pattern) == 0:
         return True
-    
+
     if len(regex) == 0 and len(pattern) != 0:
         return False
-    
+
     if len(regex) > 1 and regex[1] == "*":
         pattern = match_star(pattern[0], pattern)
         regex = regex[2:]
@@ -22,16 +23,18 @@ def regex_match(regex, pattern):
             return False
         else:
             return regex_match(regex[1:], pattern[1:])
-        
+
 
 def match_chr(regex_chr, pattern_chr):
     return regex_chr == pattern_chr
 
+
 def match_star(character, pattern_substr):
     while pattern_substr and pattern_substr[0] == character:
         pattern_substr = pattern_substr[1:]
-        
+
     return pattern_substr
+
 
 if __name__ == '__main__':
     assert regex_match("ab*", "abb") == True
@@ -42,4 +45,4 @@ if __name__ == '__main__':
     assert regex_match("a*b", "ab") == True
     assert regex_match("a*b", "aaaaaaaaaaab") == True
     assert regex_match("a*b", "cabc") == False
-    print "All tests passed successfully."
+    print("All tests passed successfully.")

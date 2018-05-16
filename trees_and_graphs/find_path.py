@@ -3,6 +3,7 @@ Given a directed graph, design an algorithm to find out whether there is a route
 between two nodes.
 """
 
+
 class Node:
     def __init__(self, label):
         self.neighbors = []
@@ -25,13 +26,14 @@ def find_path(start_node, end_node):
         current_node.visited = True
         if current_node == end_node:
             return True
-        
+
         for neighbor in current_node.neighbors:
             if not neighbor.visited:
                 queue.insert(0, neighbor)
-    
+
     return False
-        
+
+
 a_node = Node("a")
 b_node = Node("b")
 c_node = Node("c")
@@ -46,5 +48,5 @@ d_node.neighbors.extend([a_node])
 e_node.neighbors.extend([c_node, f_node])
 f_node.neighbors.extend([b_node])
 
-print find_path(a_node, d_node) # return true
-print find_path(a_node, f_node) # return false
+print(find_path(a_node, d_node))  # return true
+print(find_path(a_node, f_node))  # return false

@@ -26,6 +26,7 @@ def next_greater_element(nums1, nums2):
 
     return next_greater_elements
 
+
 assert next_greater_element([2, 3], [1, 2, 3, 4]) == [3, 4]
 assert next_greater_element([3, 2, 10], [1, 4, 2, 3, 6, 10]) == [6, 3, -1]
 print("All test cases passed.")

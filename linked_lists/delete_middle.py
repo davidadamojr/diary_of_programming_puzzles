@@ -5,6 +5,7 @@ given only access to that node
 from linked_list import LinkedListNode
 import random
 
+
 def delete_middle(middle_node):
     """
     Since you are not given access to the head of the list, you can simply
@@ -14,7 +15,6 @@ def delete_middle(middle_node):
     """
     middle_node.data = middle_node.next.data
     middle_node.next = middle_node.next.next
-
 
 
 root = LinkedListNode(5)
@@ -27,6 +27,6 @@ for i in range(0, 10):
     if i == 4:
         middle_node = current_node
 
-print "Original list: " + str(root)
+print("Original list: " + str(root))
 delete_middle(middle_node)
-print "List with middle node deleted: " + str(root)
+print("List with middle node deleted: " + str(root))
